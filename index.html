@@ -91,14 +91,19 @@
 <form class="modal-contacts">
 
 <label for="user-name">Имя</label>
-<input type="text" name="user-name-form" id="user-name">
+<input type="text" name="user-name-form" id="user-name"/>
 <label for="user-tel">Телефон</label>
-<input type="tel" name="user-tel-form" id="user-tel">
+<input type="tel" name="user-tel-form" id="user-tel"/>
 <label for="user-mail">Почта</label>
-<input type="email" name="user-mail-form" id="user-mail">
+<input type="email" name="user-mail-form" id="user-mail"/>
 
+<label for="comments">Комментарий</label>
+<textarea name="comments" id="comments" rows="30"></textarea>
 
-<button type="submit">Отправить</button>
+<input type="checkbox" name="policy" id="policy"/>
+<label for="policy">Соглашаюсь с рассылкой и принимаю <a class="policy-link" href="">Условия договора</a></label>
+
+<button type="submit" class="modal-submit-button">Отправить</button>
 
 </form>
 

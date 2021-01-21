@@ -102,11 +102,13 @@ header contacts */
   line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--colgrey);
+  transition-property: color;
   transition: 250ms var(--ttf);
 }
 .contacts-links:hover,
 .contacts-links:focus {
   color: var(--colmain);
+  transition-property: color;
   transition: 250ms var(--ttf);
 }
 
@@ -130,12 +132,14 @@ header contacts */
   line-height: 16px;
   letter-spacing: 0.02em;
   color: var(--colsec);
+  transition-property: color;
   transition: 250ms var(--ttf);
 }
 
 .links-pages:hover,
 .links-pages:focus {
   color: var(--colmain);
+  transition-property: color;
   transition: 250ms var(--ttf);
 }
 
@@ -199,12 +203,14 @@ header contacts */
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   /* opacity: 0; */
-  transition: 250ms opacity var(--ttf);
+  transition-property: opacity;
+  transition: 250ms var(--ttf);
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  transition: 250ms opacity var(--ttf);
+  transition-property: opacity;
+  transition: 250ms var(--ttf);
 }
 .modal {
   position: absolute;
@@ -212,8 +218,8 @@ header contacts */
   left: 50%;
   transform: translate(-50%, -50%);
   display: block;
-  min-width: 581px;
-  min-height: 528px;
+  width: 581px;
+  height: 528px;
   background-color: var(--colwhite);
 }
 .modal-close-btn {
@@ -235,7 +241,7 @@ header contacts */
 
 .modal-header {
   margin-top: 40px;
-  font-family: Roboto;
+  /* font-family: Roboto; */
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -243,7 +249,22 @@ header contacts */
   text-align: center;
   letter-spacing: 0.03em;
 }
+textarea {
+  display: block;
+  resize: none;
+  width: 448px;
+  height: 120px;
+}
 
+.modal-contacts {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  flex-direction: column;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 12px;
+}
 .hero-container {
   width: 1200px;
   margin: auto;
@@ -492,6 +513,7 @@ h1 {
   height: 44px;
   border-radius: 50%;
   color: var(--colsocialdef);
+  transition-property: color, background-color;
   transition: 250ms var(--ttf);
 }
 .employees-social-icons {
@@ -503,6 +525,7 @@ h1 {
 .employees-item-icons-item a:hover {
   color: var(--colwhite);
   background-color: var(--colmain);
+  transition-property: color, background-color;
   transition: 250ms var(--ttf);
 }
 
@@ -542,6 +565,7 @@ h1 {
   border-radius: 4px;
   border: 1px solid var(--colsocialdef);
   color: var(--colsocialdef);
+  transition-property: color;
   transition: 250ms var(--ttf);
 }
 .constant-clients-icon {
@@ -551,6 +575,7 @@ h1 {
 .constant-clients-item a:hover {
   color: var(--colmain);
   border-color: var(--colmain);
+  transition-property: color;
   transition: 250ms var(--ttf);
 }
 
@@ -654,11 +679,13 @@ address a {
   border-radius: 50%;
   color: var(--colwhite);
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
   transition: 250ms var(--ttf);
 }
 
 .socials-footer-item a:hover {
   background-color: var(--colmain);
+  transition-property: background-color;
   transition: 250ms var(--ttf);
 }
 
@@ -684,6 +711,7 @@ header {
   border: var(--colsubgrey);
 
   color: var(--colsec);
+  transition-property: color, background-color, box-shadow;
   transition: 250ms var(--ttf);
 }
 
@@ -691,9 +719,10 @@ header {
 .button-link-portfolio button:focus {
   background: var(--colmain);
   color: var(--colwhite);
-  transition: 250ms var(--ttf);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition-property: color, background-color, box-shadow;
+  transition: 250ms var(--ttf);
 }
 .main-container {
   padding-top: 94px;
@@ -727,6 +756,7 @@ header {
 }
 .images-projects-item a {
   position: relative;
+  transition-property: box-shadow;
   transition: 250ms var(--ttf);
 }
 .images-projects-item a:hover,
@@ -734,19 +764,21 @@ header {
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-
+  transition-property: box-shadow;
   transition: 250ms var(--ttf);
 }
 
 .images-projects-item a:hover .portfolio-img-text-hover,
 .images-projects-item a:focus .portfolio-img-text-hover {
   transform: translateY(0);
-  transition: 250ms transform var(--ttf);
+  transition-property: transform;
+  transition: 250ms var(--ttf);
 }
 .portfolio-img-text-hover {
   position: absolute;
   transform: translateY(100%);
-  transition: 250ms transform var(--ttf);
+  transition-property: transform;
+  transition: 250ms var(--ttf);
   /* z-index: 2; */
 
   display: flex;
