@@ -716,7 +716,7 @@ h1 {
   border-radius: 4px;
   border: 1px solid var(--colsocialdef);
   color: var(--colsocialdef);
-  transition-property: color;
+  transition-property: border-color, color;
   transition: 250ms var(--ttf);
 }
 .constant-clients-icon {
@@ -726,7 +726,7 @@ h1 {
 .constant-clients-item a:hover {
   color: var(--colmain);
   border-color: var(--colmain);
-  transition-property: color;
+  transition-property: border-color, color;
   transition: 250ms var(--ttf);
 }
 
