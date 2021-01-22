@@ -218,16 +218,19 @@ header contacts */
   left: 50%;
   transform: translate(-50%, -50%);
   display: block;
-  width: 581px;
-  height: 528px;
+  width: 528px;
+  height: 581px;
   background-color: var(--colwhite);
+  border-radius: 4px;
 }
 .modal-close-btn {
   position: absolute;
+  display: flex;
+  padding: 0px;
   top: 8px;
   right: 8px;
-
   border: none;
+  box-sizing: border-box;
   background-color: var(--colwhite);
 }
 .close-cross {
@@ -236,11 +239,24 @@ header contacts */
   right: 0; */
   width: 30px;
   height: 30px;
+  border: 2px solid;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--colwhite);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  color: var(--colmain);
+}
+
+.close-cross:hover,
+.close-cross:focus {
+  fill: currentColor;
 }
 
 .modal-header {
   margin-top: 40px;
+  margin-bottom: 0px;
   /* font-family: Roboto; */
   font-style: normal;
   font-weight: bold;
@@ -256,6 +272,10 @@ textarea {
   height: 120px;
 }
 
+textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .modal-contacts {
   display: flex;
   /* justify-content: center;
@@ -264,6 +284,137 @@ textarea {
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 12px;
+}
+
+.icon-modal-person {
+  position: absolute;
+  display: block;
+  top: 25%;
+  left: 14px;
+  object-fit: fill;
+  transform: translate(0%, 100%);
+  width: 12px;
+  height: 12px;
+}
+.icon-modal-phone {
+  position: absolute;
+  display: block;
+  top: 25%;
+  left: 14px;
+  transform: translate(0%, 100%);
+  width: 13px;
+  height: 13px;
+}
+.icon-modal-email {
+  position: absolute;
+  display: block;
+  top: 25%;
+  left: 14px;
+  transform: translate(0%, 100%);
+  width: 15px;
+  height: 12px;
+}
+.modal-input-contacts:focus + .icon-modal-person {
+  fill: var(--colmain);
+}
+.modal-input-contacts:focus + .icon-modal-phone {
+  fill: var(--colmain);
+}
+.modal-input-contacts:focus + .icon-modal-email {
+  fill: var(--colmain);
+}
+.checkbox-policy-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.checkbox {
+  appearance: none;
+  z-index: 2;
+  outline: none;
+}
+label[for="policy"] {
+  margin-left: 7px;
+}
+
+.checkbox-icon {
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--colsec);
+  border-radius: 2px;
+}
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--colmain);
+  border-color: var(--colmain);
+  background-image: url("../homework6/images/icon\ check.svg");
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.modal-contacts-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.modal-textarea-container {
+  margin-top: 10px;
+}
+.modal-input-contacts {
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+.modal-input-contacts:focus {
+  border: 1px solid var(--colmain);
+  outline: none;
+}
+
+.modal-comments-textarea {
+  margin-top: 4px;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
+.modal-labels-contacts {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--colgrey);
+}
+
+.checkbox-policy-container input[type="checkbox"] {
+  width: 16px;
+  height: 15px;
+}
+.modal-submit-button {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 56px;
+  padding-right: 56px; */
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: #2196f3;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: var(--colwhite);
+}
+.modal-submit-button:hover {
+  background-color: #188ce8;
 }
 .hero-container {
   width: 1200px;

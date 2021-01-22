@@ -90,18 +90,41 @@
 
 <form class="modal-contacts">
 
-<label for="user-name">Имя</label>
-<input type="text" name="user-name-form" id="user-name"/>
-<label for="user-tel">Телефон</label>
-<input type="tel" name="user-tel-form" id="user-tel"/>
-<label for="user-mail">Почта</label>
-<input type="email" name="user-mail-form" id="user-mail"/>
+<div class="modal-contacts-container">
+<label for="user-name" class="modal-labels-contacts">Имя</label>
+<input type="text" name="user-name-form" id="user-name" class="modal-input-contacts"/>
+<svg class="icon-modal-person">
+                <use href="./images/symbol-defs-modal.svg#icon-person-black"></use></svg
+              >
+</div>
 
-<label for="comments">Комментарий</label>
-<textarea name="comments" id="comments" rows="30"></textarea>
+<div class="modal-contacts-container">
+<label for="user-tel" class="modal-labels-contacts">Телефон</label>
+<input type="tel" name="user-tel-form" id="user-tel" class="modal-input-contacts"/>
+<svg class="icon-modal-phone">
+                <use href="./images/symbol-defs-modal.svg#icon-phone-black"></use></svg
+              >
+</div>
 
-<input type="checkbox" name="policy" id="policy"/>
+<div class="modal-contacts-container">
+<label for="user-mail" class="modal-labels-contacts">Почта</label>
+<input type="email" name="user-mail-form" id="user-mail" class="modal-input-contacts"/>
+<svg class="icon-modal-email">
+                <use href="./images/symbol-defs-modal.svg#icon-email-black"></use></svg
+              >
+</div>
+
+<div class="modal-textarea-container">
+<label for="comments" class="modal-labels-contacts">Комментарий</label>
+<textarea name="comments" id="comments" rows="30" placeholder="Введите текст"
+ class="modal-comments-textarea"></textarea>
+</div>
+
+<div class="checkbox-policy-container">
+<input class="checkbox" type="checkbox" name="policy" id="policy"/>
+<span class="checkbox-icon"></span>
 <label for="policy">Соглашаюсь с рассылкой и принимаю <a class="policy-link" href="">Условия договора</a></label>
+</div>
 
 <button type="submit" class="modal-submit-button">Отправить</button>
 
