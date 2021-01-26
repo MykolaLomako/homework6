@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--подключение стилей(css файл )-->
-    <link rel="stylesheet" href="./styles.css" />
+   
+   
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -14,7 +14,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-
+     <!--подключение стилей(css файл )-->
+ <link rel="stylesheet" href="./styles.css" />
     <title>Portfolio</title>
   </head>
   <body>
@@ -269,7 +270,7 @@
         </address>
         </div>
         <div class="footer-socials-container">
-        <h3 class="socials-header-footer">Присоединяйтесь</h3>
+        <b class="socials-header-footer">Присоединяйтесь</b>
         
        <ul class="socials-footer-list"> 
               <li class="socials-footer-item"><a href="https//:www.instagram.com" rel="nofollow"
@@ -297,17 +298,19 @@
               > </li> 
               </div>
              <div class="footer-subscribe-container">
-             <div>
-             <h3 class="socials-header-footer">подпишитесь на рассылку</h3>
-             <form class="subscribe-email">
-             <input type="email" name="footer-mail-form" id="footer-mail" 
-             class="footer-input-subscribe" placeholder="E-mail"/>
-             </form>
-             </div>
-             <button class="footer-subscribe-btn">Подписаться<svg class="footer-subscribe-icon">
+             
+             <b class="socials-header-footer">подпишитесь на рассылку</b>
+
+           <form class="subscribe-email">
+        <input type="email" name="footer-mail-form" id="footer-mail" 
+        class="footer-input-subscribe" placeholder="E-mail"/>
+        <div>
+         <button class="footer-subscribe-btn">Подписаться<svg class="footer-subscribe-icon">
                 <use href="./images/symbol-defs-modal.svg#icon-send">
                 </svg></button>
-         </div>
+                </div>
+        </form>
+         
       </div>
     </footer>
   </body>

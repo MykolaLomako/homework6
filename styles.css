@@ -275,7 +275,10 @@ textarea {
 textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-
+textarea:focus {
+  border-color: var(--colmain);
+  outline: none;
+}
 .modal-contacts {
   display: flex;
   /* justify-content: center;
@@ -289,28 +292,28 @@ textarea::placeholder {
 .icon-modal-person {
   position: absolute;
   display: block;
-  top: 25%;
+  top: 50%;
   left: 14px;
   object-fit: fill;
-  transform: translate(0%, 100%);
+  transform: translate(0%, 25%);
   width: 12px;
   height: 12px;
 }
 .icon-modal-phone {
   position: absolute;
   display: block;
-  top: 25%;
+  top: 50%;
   left: 14px;
-  transform: translate(0%, 100%);
+  transform: translate(0%, 25%);
   width: 13px;
   height: 13px;
 }
 .icon-modal-email {
   position: absolute;
   display: block;
-  top: 25%;
+  top: 50%;
   left: 14px;
-  transform: translate(0%, 100%);
+  transform: translate(0%, 25%);
   width: 15px;
   height: 12px;
 }
@@ -323,6 +326,14 @@ textarea::placeholder {
 .modal-input-contacts:focus + .icon-modal-email {
   fill: var(--colmain);
 }
+
+.modal-contacts-container:focus-within > .modal-labels-contacts {
+  color: var(--colmain);
+}
+
+.modal-textarea-container:focus-within > .modal-labels-contacts {
+  color: var(--colmain);
+}
 .checkbox-policy-container {
   display: flex;
   align-items: center;
@@ -331,21 +342,33 @@ textarea::placeholder {
 .checkbox {
   appearance: none;
   z-index: 2;
+  margin-left: 13px;
   outline: none;
 }
-label[for="policy"] {
+.modal-checkbox-field {
+  display: flex;
+  align-items: center;
   margin-left: 7px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
 }
 
-.checkbox-icon {
+.modal-checkbox-field::before {
+  content: " ";
   position: absolute;
-  display: inline-block;
+  left: 53px;
   width: 16px;
   height: 15px;
+
   border: 2px solid var(--colsec);
   border-radius: 2px;
 }
-.checkbox:checked + .checkbox-icon {
+
+.checkbox:checked + .modal-checkbox-field::before {
   background-color: var(--colmain);
   border-color: var(--colmain);
   background-image: url("../homework6/images/icon\ check.svg");
@@ -364,6 +387,7 @@ label[for="policy"] {
   margin-top: 10px;
 }
 .modal-input-contacts {
+  height: 40px;
   margin-top: 4px;
   border-radius: 4px;
   border: 1px solid;
@@ -749,10 +773,10 @@ footer {
   padding-right: 15px;
   /* outline: 2px solid red; */
 }
-.logo-footer {
+/* .logo-footer {
   /* padding-left: 15px; */
-  /* outline: 2px solid red; */
-}
+/* outline: 2px solid red; */
+
 .logo-footer .logo-studio {
   color: var(--colwhite);
 }
@@ -842,7 +866,7 @@ address a {
 
 /*styles for main section portfolio webpage*/
 header {
-  max-width: 1600px;
+  /* max-width: 1600px; */
   border-bottom: 1px solid #ececec;
 }
 
@@ -993,6 +1017,8 @@ header {
 .footer-subscribe-container {
   display: flex;
   margin-left: 93px;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .footer-input-subscribe {
@@ -1007,9 +1033,9 @@ header {
 }
 .footer-input-subscribe::placeholder {
   font-size: 16px;
-  weight: 400;
+
   line-height: 20px;
-  align: left;
+  align-items: left;
   vertical-align: center;
   letter-spacing: 3%;
   fill: solid rgba(255, 255, 255, 0.6);
@@ -1023,7 +1049,7 @@ header {
   width: 200px;
   height: 50px;
   margin-left: 12px;
-  margin-top: 36px;
+  margin-top: 20px;
   background-color: var(--colmain);
   border-color: var(--colmain);
   border-radius: 4px;
@@ -1035,6 +1061,10 @@ header {
   line-height: 30px;
   letter-spacing: 0.06em;
   color: var(--colwhite);
+}
+
+.subscribe-email {
+  display: flex;
 }
 .footer-subscribe-icon {
   width: 24px;
